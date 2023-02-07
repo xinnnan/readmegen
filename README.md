@@ -35,7 +35,7 @@
   npm install the packages and start the index.js. 
   To clone the repo:
   
-      git clone please check the ssh link.
+      git clone git@github.com:xinnnan/readmegen.git
   
 ---
 ## License
