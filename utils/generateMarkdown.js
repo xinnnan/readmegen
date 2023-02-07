@@ -1,9 +1,11 @@
-
+// function to generate markdown for README
+function generateMarkdown(data) {
+  return `
   
-# Readme Gen
-  An easy to use command prompt readme generator created using node.js.
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  [A deployed version can be viewed here.](currently not available)
+# ${data.title}
+  ${data.description}
+  ${data.licenseBadge}
+  [A deployed version can be viewed here.](${data.URL})
   
 ---
 ## Contents
@@ -19,7 +21,7 @@
 6. [Authors and acknowledgment](#authors%20and%20acknowledgment)
 ---
 ## About
-  With Badge and prompt questions
+  ${data.about}
 ---
 ## User Story
   
@@ -32,14 +34,14 @@
   ![]()
 ---
 ## Installation:
-  npm install the packages and start the index.js. 
+  ${data.installation}
   To clone the repo:
   
-      git clone please check the ssh link.
+      git clone ${data.clone}
   
 ---
 ## License
-  License used for this project - MIT
+  License used for this project - ${data.license}
   * For more information on license types, please reference this website
   for additional licensing information - [https: //choosealicense.com/](https://choosealicense.com/).
 ---
@@ -55,11 +57,16 @@
   Following a code review, your feature will be merged.
 ---
 ## Tests:
-  NA
+  ${data.test}
 ---
 ## Authors and Acknowledgments
-  Xinnan
+  ${data.author}
 ---
 ## Contact Information:
-* GitHub Username: xinnnan
-* GitHub Email: xinnancao@gmail.com
+* GitHub Username: ${data.userName}
+* GitHub Email: ${data.userEmail}
+  
+`;
+}
+
+module.exports = generateMarkdown;
